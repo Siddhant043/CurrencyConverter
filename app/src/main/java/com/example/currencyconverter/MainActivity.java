@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void convertFunction(View view){
+    public void convertFunction(View view){             // Currency Converter Function
         Log.i("Info", "It works!");
         EditText dollarAmt = (EditText) findViewById(R.id.dollarValue);
         Boolean numeric = true;
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         }catch(NumberFormatException e){
             numeric = false;
         }
-
         if(numeric){
             double dollarAmtInDouble = Double.parseDouble(dollarAmt.getText().toString());
             double tempValue = dollarAmtInDouble * 72.96;
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
             Log.i("text", "Wrong Value entered.");
             Toast.makeText(this, "Wrong Value Entered", Toast.LENGTH_LONG).show();
         }
-
     }
 
     @Override
